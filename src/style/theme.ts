@@ -13,11 +13,12 @@ const colors = {
   dark: "#02040F",
   purple: "#7F75EE",
   red: "#FF5F5F",
+  black: "#000000",
 };
 
 const fonts = {
   Title: css`
-    font-family: pretendard;
+    font-family: "pretendard";
     font-size: 2.4rem;
     font-weight: 600;
     font-style: normal;
@@ -166,6 +167,6 @@ const fonts = {
   `,
 };
 
-const theme = { mixin, colors, fonts };
+const theme = { colors, fonts, mixin };
 
 export default theme;

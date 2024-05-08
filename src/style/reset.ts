@@ -27,7 +27,7 @@ export const reset = css`
     overflow-wrap: break-word;
     tab-size: 4;
 
-    background-color: ${({ theme }) => theme.colors.grey_200};
+    background-color: #000000;
 
     -webkit-tap-highlight-color: transparent;
   }

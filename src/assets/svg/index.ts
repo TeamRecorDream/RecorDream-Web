@@ -1,4 +1,5 @@
 export { default as Favicon } from "./Favicon";
+export { default as IcFeelingLBlank } from "./FeelingLBlank";
 export { default as IcPcKakaotalk } from "./PcKakaotalk";
 export { default as IcPcBackgrHalfstars } from "./PcBackgrHalfstars";
 export { default as IcPcBackgrStars } from "./PcBackgrStars";
