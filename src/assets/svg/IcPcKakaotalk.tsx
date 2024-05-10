@@ -1,5 +1,5 @@
 import type { SVGProps } from "react";
-const SvgPcKakaotalk = (props: SVGProps<SVGSVGElement>) => (
+const SvgIcPcKakaotalk = (props: SVGProps<SVGSVGElement>) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36" {...props}>
     <g fill="#fff">
       <path d="m14.192 13.959-1.038 2.927h2.075z" />
@@ -7,4 +7,4 @@ const SvgPcKakaotalk = (props: SVGProps<SVGSVGElement>) => (
     </g>
   </svg>
 );
-export default SvgPcKakaotalk;
+export default SvgIcPcKakaotalk;

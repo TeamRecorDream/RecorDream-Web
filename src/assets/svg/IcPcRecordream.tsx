@@ -1,5 +1,5 @@
 import type { SVGProps } from "react";
-const SvgPcRecordream = (props: SVGProps<SVGSVGElement>) => (
+const SvgIcPcRecordream = (props: SVGProps<SVGSVGElement>) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 36" {...props}>
     <path
       fill="#fff"
@@ -11,4 +11,4 @@ const SvgPcRecordream = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 );
-export default SvgPcRecordream;
+export default SvgIcPcRecordream;

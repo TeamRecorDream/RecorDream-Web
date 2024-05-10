@@ -17,17 +17,17 @@ export const reset = css`
   }
 
   :root {
-    overflow: hidden scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
 
     width: 100%;
-
     line-height: 1.5;
     text-size-adjust: 100%;
     word-break: break-word;
     overflow-wrap: break-word;
     tab-size: 4;
 
-    background-color: ${({ theme }) => theme.colors.grey_200};
+    background-color: #000000;
 
     -webkit-tap-highlight-color: transparent;
   }
