@@ -12,7 +12,7 @@ interface RecordreamLayoutInterface {
 const RecordreamLayout = ({ iconOn, btnColor, btnMessage }: RecordreamLayoutInterface) => {
   return (
     <RecordreamLayoutWrapper>
-      <IcPcRecordream style={{ width: 134, height: 24 }} />
+      <IcPcRecordream style={{ width: 134, height: 24, marginTop: 74, marginBottom: 18 }} />
       {iconOn ? (
         <IcFeelingLBlank style={{ width: 85, height: 85, marginTop: 74, marginBottom: 18 }} />
       ) : (
