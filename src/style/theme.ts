@@ -14,6 +14,7 @@ const colors = {
   purple: "#7F75EE",
   red: "#FF5F5F",
   black: "#000000",
+  kakao: "#FEE500",
 };
 
 const fonts = {

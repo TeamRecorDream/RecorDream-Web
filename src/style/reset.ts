@@ -17,10 +17,10 @@ export const reset = css`
   }
 
   :root {
-    overflow: hidden scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
 
     width: 100%;
-
     line-height: 1.5;
     text-size-adjust: 100%;
     word-break: break-word;
