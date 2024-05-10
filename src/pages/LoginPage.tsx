@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { IcPcLogo } from "../assets/svg";
-
+import KakaoButton from "../components/KakaoButton";
+import IcPcBackgrStars from "../../public/svg/ic_pc_backgr_stars.svg";
 const LoginPage = () => {
   const onClickLoginBtn = () => {};
   // console.log("LOGINPAGE!");
@@ -9,8 +10,7 @@ const LoginPage = () => {
       <LogoSection>
         <IcPcLogo />
       </LogoSection>
-      {/* <PcDreamAlarm/> */}
-      <LoginBtn onClick={onClickLoginBtn}>카카오로 시작하기</LoginBtn>
+      <KakaoButton onClickBtn={onClickLoginBtn} />
       <LoginMessage>로그인 후 이용이 가능합니다.</LoginMessage>
     </LoginPageWrapper>
   );
@@ -19,27 +19,28 @@ const LoginPage = () => {
 export default LoginPage;
 
 const LoginPageWrapper = styled.div`
-  margin: 0 auto;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+
+  background-image: url(${IcPcBackgrStars});
+  object-fit: cover;
+  background-repeat: no-repeat;
 `;
 
 const LogoSection = styled.section`
-  width: 62.3rem;
-  height: 62.2rem;
-  margin-top: 10.3rem;
-  margin-right: 2.8rem;
-`;
+  position: relative;
+  left: -11.2rem;
 
-const LoginBtn = styled.button`
-  width: 46rem;
-  height: 3.6rem;
-  border-radius: 1.8rem;
-  color: ${({ theme }) => theme.colors.white};
-  font-size: 2.2rem;
-  border-color: ${({ theme }) => theme.colors.white};
-  margin-bottom: 1.5rem;
+  width: 43.4rem;
+  height: 41.5rem;
+  margin-top: 2.4rem;
+  margin-bottom: 7.1rem;
 `;
 
 const LoginMessage = styled.span`
+  margin-top: 1rem;
+
   color: ${({ theme }) => theme.colors.grey02};
-  font-size: 1.8rem;
+  font-size: 1.2rem;
 `;
