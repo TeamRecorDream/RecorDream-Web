@@ -3,7 +3,6 @@ import { IcPcLogo } from "../assets/svg";
 import KakaoButton from "../components/KakaoButton";
 import IcPcBackgrStars from "../../public/svg/ic_pc_backgr_stars.svg";
 const LoginPage = () => {
-  // console.log("LOGINPAGE!");
   return (
     <LoginPageWrapper>
       <LogoSection>
