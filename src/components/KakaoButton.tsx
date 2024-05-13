@@ -1,13 +1,10 @@
 import styled from "styled-components";
 import { IcKakao } from "../assets/svg";
+import useKakaoLogin from "../hooks/queries/useKakaoLogin";
 
-interface KakaoBtnInterface {
-  onClickBtn: VoidFunction;
-}
-
-const KakaoButton = ({ onClickBtn }: KakaoBtnInterface) => {
+const KakaoButton = () => {
   return (
-    <KakaoButtonWrapper onClick={onClickBtn}>
+    <KakaoButtonWrapper onClick={useKakaoLogin}>
       <KakaoIcon />
       <KakaoText>카카오 로그인</KakaoText>
     </KakaoButtonWrapper>

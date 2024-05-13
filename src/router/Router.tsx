@@ -5,6 +5,7 @@ import RecordreamLayout from "../pages/RecordreamLayout";
 import DeletePage from "../pages/DeletePage";
 import CompletePage from "../pages/CompletePage";
 import UnregisteredPage from "../pages/UnregisteredPage";
+import KakaoLoginPage from "../pages/KakaoLoginPage";
 
 const router = createBrowserRouter([
   {
@@ -16,8 +17,8 @@ const router = createBrowserRouter([
         element: <LoginPage />,
       },
       {
-        path: "/",
-        element: <LoginPage />,
+        path: "/auth/login",
+        element: <KakaoLoginPage />,
       },
       {
         element: <RecordreamLayout iconOn={true} btnColor="red" btnMessage="탈퇴하기" />,

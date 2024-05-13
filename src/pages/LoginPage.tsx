@@ -3,14 +3,12 @@ import { IcPcLogo } from "../assets/svg";
 import KakaoButton from "../components/KakaoButton";
 import IcPcBackgrStars from "../../public/svg/ic_pc_backgr_stars.svg";
 const LoginPage = () => {
-  const onClickLoginBtn = () => {};
-  // console.log("LOGINPAGE!");
   return (
     <LoginPageWrapper>
       <LogoSection>
         <IcPcLogo />
       </LogoSection>
-      <KakaoButton onClickBtn={onClickLoginBtn} />
+      <KakaoButton />
       <LoginMessage>로그인 후 이용이 가능합니다.</LoginMessage>
     </LoginPageWrapper>
   );
