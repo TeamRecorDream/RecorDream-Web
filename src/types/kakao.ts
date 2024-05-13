@@ -9,3 +9,8 @@ export interface KakaoLoginResponseType extends Response {
     };
   };
 }
+
+export interface KakaoLoginRequestType {
+  kakaoToken: string;
+  fcmToken: string;
+}
