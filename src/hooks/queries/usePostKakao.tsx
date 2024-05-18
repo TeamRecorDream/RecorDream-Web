@@ -1,7 +1,7 @@
-import { useCallback, useState } from "react";
-import kakao from "../../apis/kakao";
-import { AxiosError } from "axios";
-import { KakaoLoginInfoType, KakaoLoginResponseType } from "../../types/kakao";
+import { useCallback, useState } from 'react';
+import kakao from '../../apis/kakao';
+import { AxiosError } from 'axios';
+import { KakaoLoginInfoType, KakaoLoginResponseType } from '../../types/kakao';
 
 const usePostKakao = () => {
   const [kakaoResponse, setKakaoResponse] = useState<KakaoLoginInfoType | null>(null);
@@ -13,7 +13,7 @@ const usePostKakao = () => {
     setKakaoLoading(true);
     setKakaoError(null);
     try {
-      const res = await kakao.postKakaoLogin({ kakaoToken: accessToken, fcmToken: "0" });
+      const res = await kakao.postKakaoLogin({ kakaoToken: accessToken, fcmToken: '0' });
       const data: KakaoLoginResponseType = res.data.data;
       setKakaoResponse({
         userId: data.data.userId,
@@ -22,8 +22,8 @@ const usePostKakao = () => {
         refreshToken: data.data.refreshToken,
         nickname: data.data.nickname,
       });
-      console.log("응답이 왔나요?", kakaoResponse);
-      localStorage.setItem("accessToken", data.data.accessToken);
+      console.log('응답이 왔나요?', kakaoResponse);
+      localStorage.setItem('accessToken', data.data.accessToken);
     } catch (err) {
       setKakaoError(err as AxiosError);
     } finally {
