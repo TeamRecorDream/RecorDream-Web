@@ -1,14 +1,15 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface ButtonInterface {
   color: string;
   borderColor?: string;
   message: string;
+  onClick: VoidFunction;
 }
 
-const Button = ({ color, borderColor, message }: ButtonInterface) => {
+const Button = ({ color, borderColor, message, onClick }: ButtonInterface) => {
   return (
-    <ButtonWrapper $color={color} $borderColor={borderColor}>
+    <ButtonWrapper $color={color} $borderColor={borderColor} onClick={onClick}>
       {message}
     </ButtonWrapper>
   );
@@ -30,5 +31,5 @@ const ButtonWrapper = styled.div<{ $color: string; $borderColor?: string }>`
 
   border-radius: 1.8rem;
   border: 1px solid
-    ${({ theme, $borderColor }) => ($borderColor ? theme.colors[$borderColor] : "white")};
+    ${({ theme, $borderColor }) => ($borderColor ? theme.colors[$borderColor] : 'white')};
 `;

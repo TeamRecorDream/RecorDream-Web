@@ -6,6 +6,8 @@ import DeletePage from '../pages/DeletePage';
 import CompletePage from '../pages/CompletePage';
 import UnregisteredPage from '../pages/UnregisteredPage';
 import KakaoLoginPage from '../pages/KakaoLoginPage';
+import { useDeleteUser } from '../hooks/queries/useDeleteUser';
+import useNavigateHome from '../hooks/useNavigateHome';
 
 const router = createBrowserRouter([
   {
@@ -21,7 +23,14 @@ const router = createBrowserRouter([
         element: <KakaoLoginPage />,
       },
       {
-        element: <RecordreamLayout iconOn={true} btnColor="red" btnMessage="탈퇴하기" />,
+        element: (
+          <RecordreamLayout
+            iconOn={true}
+            btnColor="red"
+            btnMessage="탈퇴하기"
+            handleClick={useDeleteUser}
+          />
+        ),
         children: [
           {
             path: '/delete',
@@ -30,7 +39,14 @@ const router = createBrowserRouter([
         ],
       },
       {
-        element: <RecordreamLayout iconOn={false} btnColor="white" btnMessage="확인" />,
+        element: (
+          <RecordreamLayout
+            iconOn={false}
+            btnColor="white"
+            btnMessage="확인"
+            handleClick={useNavigateHome}
+          />
+        ),
         children: [
           { path: '/complete', element: <CompletePage /> },
           { path: '/unregistered', element: <UnregisteredPage /> },
