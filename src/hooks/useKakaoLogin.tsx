@@ -1,4 +1,4 @@
-import { kakaoURL } from "../../utils/login";
+import { kakaoURL } from '../utils/login';
 
 const useKakaoLogin = () => {
   window.location.replace(kakaoURL);

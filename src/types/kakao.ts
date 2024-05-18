@@ -1,13 +1,16 @@
 export interface KakaoLoginResponseType extends Response {
-  data: {
-    data: {
-      userId: string;
-      isAlreadyUser: boolean;
-      accessToken: string;
-      refreshToken: string;
-      nickname: string;
-    };
-  };
+  status: number;
+  success: boolean;
+  message: string;
+  data: KakaoLoginInfoType;
+}
+
+export interface KakaoLoginInfoType {
+  userId: string;
+  isAlreadyUser: boolean;
+  accessToken: string;
+  refreshToken: string;
+  nickname: string;
 }
 
 export interface KakaoLoginRequestType {

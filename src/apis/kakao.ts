@@ -1,7 +1,7 @@
-import { KakaoLoginRequestType } from "../types/kakao";
-import { api } from "./api";
+import { KakaoLoginRequestType } from '../types/kakao';
+import { api } from './api';
 
-const BASE_PATH = "/auth/login";
+const BASE_PATH = '/auth/login';
 
 const kakao = {
   postKakaoLogin: ({ kakaoToken, fcmToken }: KakaoLoginRequestType) =>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { IcKakao } from "../assets/svg";
-import useKakaoLogin from "../hooks/queries/useKakaoLogin";
+import useKakaoLogin from "../hooks/useKakaoLogin";
 
 const KakaoButton = () => {
   return (
