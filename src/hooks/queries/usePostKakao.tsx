@@ -13,6 +13,8 @@ const usePostKakao = () => {
     setKakaoLoading(true);
     setKakaoError(null);
     try {
+      console.log('TYPE', typeof accessToken);
+      console.log('TOKEN', accessToken);
       const res = await kakao.postKakaoLogin({ kakaoToken: accessToken, fcmToken: '0' });
       const data: KakaoLoginResponseType = res.data.data;
       setKakaoResponse({
