@@ -15,9 +15,13 @@ const KakaoLoginPage = () => {
   const handlePostKakao = async (code: string) => {
     try {
       await postKakao(code);
-      console.log('이동 전 콘솔 찍히는지 확인');
       if (!kakaoError && !kakaoLoading && kakaoResponse) {
-        navigate('/delete');
+        console.log('이동 전 콘솔 찍히는지 확인', kakaoResponse);
+        if (kakaoResponse.isAlreadyUser) {
+          navigate('/delete');
+        } else {
+          navigate('/unregistered');
+        }
       }
     } catch (error) {
       navigate('/unregistered');
