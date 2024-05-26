@@ -25,9 +25,11 @@ const usePostKakao = () => {
         nickname: data.data.nickname,
       });
       console.log('응답이 왔나요?', kakaoResponse);
-      localStorage.setItem('accessToken', data.data.accessToken);
+      localStorage.setItem('ACCESS_TOKEN', data.data.accessToken);
+      localStorage.setItem('REFRESH_TOKEN', data.data.refreshToken);
     } catch (err) {
       setKakaoError(err as AxiosError);
+      console.log('에러 발생', err);
     } finally {
       setKakaoLoading(false);
     }
