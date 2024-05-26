@@ -3,6 +3,7 @@ import user from '../../apis/user';
 
 export const useDeleteUser = () => {
   const deleteUser = async (accessToken: string) => {
+    console.log('clicked?');
     const navigate = useNavigate();
     try {
       await user.deleteUser(accessToken);

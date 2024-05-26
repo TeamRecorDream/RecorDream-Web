@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Layout from '../layouts/Layout';
 import LoginPage from '../pages/LoginPage';
-import RecordreamLayout from '../pages/RecordreamLayout';
+import RecordreamLayout from '../layouts/RecordreamLayout';
 import DeletePage from '../pages/DeletePage';
 import CompletePage from '../pages/CompletePage';
 import UnregisteredPage from '../pages/UnregisteredPage';
