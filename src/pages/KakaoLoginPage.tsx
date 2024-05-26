@@ -16,7 +16,12 @@ const KakaoLoginPage = () => {
     try {
       await postKakao(code);
       if (!kakaoError && !kakaoLoading && kakaoResponse) {
-        navigate('/delete');
+        console.log('이동 전 콘솔 찍히는지 확인', kakaoResponse);
+        if (kakaoResponse.isAlreadyUser) {
+          navigate('/delete');
+        } else {
+          navigate('/unregistered');
+        }
       }
     } catch (error) {
       navigate('/unregistered');
@@ -29,7 +34,7 @@ const KakaoLoginPage = () => {
       .then((res) => {
         if (res) {
           const token = res.data.access_token;
-          localStorage.setItem('token', JSON.stringify(token));
+          // localStorage.setItem('ACCESS_TOKEN', JSON.stringify(token));
           handlePostKakao(token);
         }
       })

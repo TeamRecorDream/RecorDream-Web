@@ -12,7 +12,7 @@ interface DeleteLayoutInterface {
 
 const DeleteLayout = ({ iconOn, btnColor, btnMessage }: DeleteLayoutInterface) => {
   const { deleteUser } = useDeleteUser();
-  const accessToken = localStorage.getItem('accessToken');
+  const accessToken = localStorage.getItem('ACCESS_TOKEN');
 
   console.log('ACCESSTOKEn', accessToken);
   if (!accessToken) {
