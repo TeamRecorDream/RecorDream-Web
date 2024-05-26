@@ -25,7 +25,7 @@ const RecordreamLayout = ({
         <IcPcBlank style={{ width: 85, height: 85, marginTop: 74, marginBottom: 18 }} />
       )}
       <Outlet />
-      <Button color={btnColor} message={btnMessage} onClick={handleClick} />
+      <Button color={btnColor} message={btnMessage} onClick={() => handleClick} />
     </RecordreamLayoutWrapper>
   );
 };
