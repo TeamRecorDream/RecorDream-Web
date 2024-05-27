@@ -16,7 +16,8 @@ const usePostKakao = () => {
       console.log('TYPE', typeof accessToken);
       console.log('TOKEN', accessToken);
       const res = await kakao.postKakaoLogin({ kakaoToken: accessToken, fcmToken: '0' });
-      const data: KakaoLoginResponseType = res.data.data;
+      const data: KakaoLoginResponseType = res.data;
+      console.log('data', data);
       setKakaoResponse({
         userId: data.data.userId,
         accessToken: data.data.accessToken,
