@@ -30,7 +30,7 @@ const KakaoLoginPage = () => {
   useEffect(() => {
     fetchLogin();
     console.log('몇 번 불리는지');
-  }, [fetchLogin]);
+  }, []);
 
   useEffect(() => {
     if (!kakaoLoading && kakaoResponse) {
