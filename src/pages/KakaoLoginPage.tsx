@@ -15,6 +15,7 @@ const KakaoLoginPage = () => {
   const handlePostKakao = async (code: string) => {
     try {
       await postKakao(code);
+      console.log('KakaoResponse', kakaoResponse);
       if (!kakaoError && !kakaoLoading && kakaoResponse) {
         console.log('이동 전 콘솔 찍히는지 확인', kakaoResponse);
         if (kakaoResponse.isAlreadyUser) {
