@@ -18,16 +18,10 @@ const usePostKakao = () => {
       const res = await kakao.postKakaoLogin({ kakaoToken: accessToken, fcmToken: '0' });
       const data: KakaoLoginResponseType = res.data;
       console.log('data', data);
-      setKakaoResponse({
-        userId: data.data.userId,
-        accessToken: data.data.accessToken,
-        isAlreadyUser: data.data.isAlreadyUser,
-        refreshToken: data.data.refreshToken,
-        nickname: data.data.nickname,
-      });
-      console.log('응답이 왔나요?', kakaoResponse);
-      localStorage.setItem('ACCESS_TOKEN', data.data.accessToken);
-      localStorage.setItem('REFRESH_TOKEN', data.data.refreshToken);
+      setKakaoResponse(data.data);
+      // console.log('응답이 왔나요?', kakaoResponse);
+      // localStorage.setItem('ACCESS_TOKEN', data.data.accessToken);
+      // localStorage.setItem('REFRESH_TOKEN', data.data.refreshToken);
     } catch (err) {
       setKakaoError(err as AxiosError);
       console.log('에러 발생', err);
