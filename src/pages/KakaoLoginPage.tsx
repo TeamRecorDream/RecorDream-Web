@@ -15,9 +15,8 @@ const KakaoLoginPage = () => {
   const handlePostKakao = async (code: string) => {
     try {
       await postKakao(code);
-      console.log('KakaoResponse', kakaoResponse);
       if (!kakaoError && !kakaoLoading && kakaoResponse) {
-        console.log('이동 전 콘솔 찍히는지 확인', kakaoResponse);
+        console.log('이동 전 콘솔 확인', kakaoResponse);
         if (kakaoResponse.isAlreadyUser) {
           navigate('/delete');
         } else {
@@ -25,21 +24,25 @@ const KakaoLoginPage = () => {
         }
       }
     } catch (error) {
-      navigate('/unregistered');
       console.log('ERROR', error);
+      navigate('/unregistered');
     }
   };
 
   useEffect(() => {
-    useGetToken()
-      .then((res) => {
+    const fetchLogin = async () => {
+      try {
+        const res = await useGetToken();
         if (res) {
           const token = res.data.access_token;
           // localStorage.setItem('ACCESS_TOKEN', JSON.stringify(token));
-          handlePostKakao(token);
+          await handlePostKakao(token);
         }
-      })
-      .catch((err) => console.log(err));
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchLogin();
   }, []);
 
   return <></>;
