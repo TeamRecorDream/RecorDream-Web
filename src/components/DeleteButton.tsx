@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useDeleteUser } from '../hooks/queries/useDeleteUser';
+import { useNavigate } from 'react-router-dom';
 
 interface DeleteButtonInterface {
   message: string;
@@ -8,14 +9,20 @@ interface DeleteButtonInterface {
 const DeleteButton = ({ message }: DeleteButtonInterface) => {
   const { deleteUser } = useDeleteUser();
   const accessToken = localStorage.getItem('ACCESS_TOKEN');
+  const navigate = useNavigate();
 
   if (!accessToken) {
     console.error('Access token is missing');
     return null;
   }
 
-  const handleDeleteUser = () => {
-    deleteUser(accessToken);
+  const handleDeleteUser = async () => {
+    const result = await deleteUser(accessToken);
+    if (result.success) {
+      navigate('/complete');
+    } else {
+      navigate('/error');
+    }
   };
 
   return <ButtonWrapper onClick={handleDeleteUser}>{message}</ButtonWrapper>;
