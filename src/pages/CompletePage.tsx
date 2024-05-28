@@ -1,6 +1,8 @@
-import styled from "styled-components";
-import Subtitle from "../components/Subtitle";
-import Title from "../components/Title";
+import styled from 'styled-components';
+import Subtitle from '../components/Subtitle';
+import Title from '../components/Title';
+import Button from '../components/Button';
+import useNavigateHome from '../hooks/useNavigateHome';
 
 const CompletePage = () => {
   return (
@@ -9,6 +11,7 @@ const CompletePage = () => {
       <Subtitle>
         그동안 레코드림을 이용해주셔서 <br /> 감사합니다.
       </Subtitle>
+      <Button message="확인" onClick={useNavigateHome} />
     </CompletePageWrapper>
   );
 };
