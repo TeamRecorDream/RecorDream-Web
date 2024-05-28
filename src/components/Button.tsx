@@ -1,23 +1,17 @@
 import styled from 'styled-components';
 
 interface ButtonInterface {
-  color: string;
-  borderColor?: string;
   message: string;
   onClick: VoidFunction;
 }
 
-const Button = ({ color, borderColor, message, onClick }: ButtonInterface) => {
-  return (
-    <ButtonWrapper $color={color} $borderColor={borderColor} onClick={onClick}>
-      {message}
-    </ButtonWrapper>
-  );
+const Button = ({ message, onClick }: ButtonInterface) => {
+  return <ButtonWrapper onClick={onClick}>{message}</ButtonWrapper>;
 };
 
 export default Button;
 
-const ButtonWrapper = styled.div<{ $color: string; $borderColor?: string }>`
+const ButtonWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,9 +21,8 @@ const ButtonWrapper = styled.div<{ $color: string; $borderColor?: string }>`
 
   font-size: 1.6rem;
   text-align: center;
-  color: ${({ theme, $color }) => theme.colors[$color]};
+  color: ${({ theme }) => theme.colors.white};
 
   border-radius: 1.8rem;
-  border: 1px solid
-    ${({ theme, $borderColor }) => ($borderColor ? theme.colors[$borderColor] : 'white')};
+  border: 1px solid ${({ theme }) => theme.colors.white};
 `;

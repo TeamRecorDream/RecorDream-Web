@@ -1,21 +1,12 @@
 import styled from 'styled-components';
 import { IcFeelingLBlank, IcPcBlank, IcPcRecordream } from '../assets/svg';
-import Button from '../components/Button';
 import { Outlet } from 'react-router-dom';
 
 interface RecordreamLayoutInterface {
   iconOn: boolean;
-  btnColor: string;
-  btnMessage: string;
-  handleClick: VoidFunction;
 }
 
-const RecordreamLayout = ({
-  iconOn,
-  btnColor,
-  btnMessage,
-  handleClick,
-}: RecordreamLayoutInterface) => {
+const RecordreamLayout = ({ iconOn }: RecordreamLayoutInterface) => {
   return (
     <RecordreamLayoutWrapper>
       <IcPcRecordream style={{ width: 134, height: 24, marginTop: 74, marginBottom: 18 }} />
@@ -25,7 +16,6 @@ const RecordreamLayout = ({
         <IcPcBlank style={{ width: 85, height: 85, marginTop: 74, marginBottom: 18 }} />
       )}
       <Outlet />
-      <Button color={btnColor} message={btnMessage} onClick={() => handleClick} />
     </RecordreamLayoutWrapper>
   );
 };
