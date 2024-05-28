@@ -8,6 +8,7 @@ import UnregisteredPage from '../pages/UnregisteredPage';
 import KakaoLoginPage from '../pages/KakaoLoginPage';
 
 import DeleteLayout from '../layouts/DeleteLayout';
+import ErrorPage from '../pages/ErrorPage';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
         children: [
           { path: '/complete', element: <CompletePage /> },
           { path: '/unregistered', element: <UnregisteredPage /> },
+          { path: '/error', element: <ErrorPage /> },
         ],
       },
     ],
