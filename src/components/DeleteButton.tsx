@@ -39,7 +39,7 @@ const ButtonWrapper = styled.div`
   height: 5.2rem;
   margin-top: 7.4rem;
 
-  font-size: 1.6rem;
+  ${({ theme }) => theme.fonts.button_01};
   text-align: center;
   color: ${({ theme }) => theme.colors.red};
 
