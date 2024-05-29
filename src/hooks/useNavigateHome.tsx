@@ -2,8 +2,10 @@ import { useNavigate } from 'react-router-dom';
 
 const useNavigateHome = () => {
   const navigate = useNavigate();
-  navigate('/');
-  return <></>;
+  const navigateHome = () => {
+    navigate('/');
+  };
+  return navigateHome;
 };
 
 export default useNavigateHome;

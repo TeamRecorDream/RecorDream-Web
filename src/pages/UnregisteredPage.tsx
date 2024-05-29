@@ -4,10 +4,11 @@ import useNavigateHome from '../hooks/useNavigateHome';
 import Button from '../components/Button';
 
 const UnregisteredPage = () => {
+  const navigateHome = useNavigateHome();
   return (
     <UnregisteredPageWrapper>
       <Title>가입된 회원이 아닙니다.</Title>
-      <Button message="확인" onClick={useNavigateHome} />
+      <Button message="확인" onClick={navigateHome} />
     </UnregisteredPageWrapper>
   );
 };
