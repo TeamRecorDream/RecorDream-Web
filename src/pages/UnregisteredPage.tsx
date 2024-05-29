@@ -8,7 +8,7 @@ const UnregisteredPage = () => {
   return (
     <UnregisteredPageWrapper>
       <Title>가입된 회원이 아닙니다.</Title>
-      <Button message="확인" onClick={navigateHome} />
+      <Button message="확인" onClick={navigateHome} className="unregistered" />
     </UnregisteredPageWrapper>
   );
 };

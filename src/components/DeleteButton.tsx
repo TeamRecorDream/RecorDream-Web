@@ -37,6 +37,7 @@ const ButtonWrapper = styled.div`
 
   width: 26rem;
   height: 5.2rem;
+  margin-top: 7.4rem;
 
   font-size: 1.6rem;
   text-align: center;
