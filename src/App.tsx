@@ -1,8 +1,8 @@
-import { RouterProvider } from "react-router-dom";
-import styled, { ThemeProvider } from "styled-components";
-import router from "./router/Router";
-import GlobalStyle from "./style/GlobalStyle";
-import theme from "./style/theme";
+import { RouterProvider } from 'react-router-dom';
+import styled, { ThemeProvider } from 'styled-components';
+import router from './router/Router';
+import GlobalStyle from './style/GlobalStyle';
+import theme from './style/theme';
 
 function App() {
   return (

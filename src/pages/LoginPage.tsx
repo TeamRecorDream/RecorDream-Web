@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { IcPcLogo } from "../assets/svg";
-import KakaoButton from "../components/KakaoButton";
-import IcPcBackgrStars from "../../public/svg/ic_pc_backgr_stars.svg";
+import styled from 'styled-components';
+import { IcPcLogo } from '../assets/svg';
+import KakaoButton from '../components/KakaoButton';
+import IcPcBackgrStars from '../../public/svg/ic_pc_backgr_stars.svg';
 const LoginPage = () => {
   return (
     <LoginPageWrapper>
@@ -18,6 +18,8 @@ export default LoginPage;
 
 const LoginPageWrapper = styled.div`
   height: 100dvh;
+
+  ${({ theme }) => theme.mixin.flexCenter};
   display: flex;
   flex-direction: column;
 
