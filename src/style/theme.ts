@@ -51,6 +51,16 @@ const fonts = {
     letter-spacing: -0.016rem;
     font-style: normal;
   `,
+
+  button_kakao: css`
+    font-family: 'pretendard';
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 165%;
+    letter-spacing: -0.14px;
+    text-transform: capitalize;
+    font-style: normal;
+  `,
 };
 
 const theme = { colors, fonts, mixin };
